@@ -8,6 +8,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const urlOrigin = 'http://localhost:4000/r/';
+  const apiUrl= 'http://localhost:4000'
 
   const handleUrlChange = (event) => {
     setUrl(event.target.value);
@@ -26,18 +27,18 @@ function App() {
     setShortUrl('');
     setIsLoading(true);
     try {
-      const response = await fetch("http://localhost:4000/shorten", {
+      const response = await fetch(`${apiUrl}/shorten`, {
         method: 'POST',
         body: JSON.stringify({ url }),
         headers: { 'Content-Type': 'application/json' },
       });
 
-      if (response.status === 300) {
+      if (response.status === 400) {
         setIsSuccess(false);
         setIsInvalid(true);
         setTimeout(() => setIsInvalid(false), 2000);
         
-      } else if (response.ok) {
+      } else if (response.status === 200) {
         setUrl('');
         const shortCode = await response.json();
         setShortUrl(urlOrigin + shortCode);

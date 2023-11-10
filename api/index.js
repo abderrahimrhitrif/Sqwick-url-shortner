@@ -28,7 +28,7 @@ app.post('/shorten', async (req, res) => {
                 url,
                 shortCode
             })
-            res.json(urlDoc.shortCode);
+            res.status(200).json(urlDoc.shortCode);
         } catch (error) {
             throw (error)
         }
