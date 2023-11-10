@@ -33,7 +33,7 @@ app.post('/shorten', async (req, res) => {
             throw (error)
         }
     } else {
-        res.status(300).json('invalid url')
+        res.status(400).json('invalid url')
     }
 
 
@@ -41,14 +41,15 @@ app.post('/shorten', async (req, res) => {
 })
 
 app.get("/r/:shortCode", async(req, res) =>{
-    try{
+
         const { shortCode } = req.params;
         const urlDoc = await Url.findOne({ shortCode });
-        res.redirect(urlDoc.url);  
-    }
-    catch(error){
-        res.json(error);
-    }
-})
+        if (urlDoc) {
+            res.status(302).redirect(urlDoc.url);
+          } else {
+            res.status(404).json({ error: 'Short code not found' });
+          }
 
+})
+module.exports = app;
 app.listen(4000);
