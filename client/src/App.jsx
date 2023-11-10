@@ -7,8 +7,9 @@ function App() {
   const [isInvalid, setIsInvalid] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-  const urlOrigin = 'http://localhost:4000/r/';
-  const apiUrl= 'http://localhost:4000'
+  const urlOrigin = 'https://sqk.vercel.app/r/';
+  const apiUrl= 'https://sqk.vercel.app'
+  // Http://localhost:4000 can be used instead if the project is used localy
 
   const handleUrlChange = (event) => {
     setUrl(event.target.value);
@@ -85,13 +86,13 @@ function App() {
         <p>This is a simple URL shortening service. Enter your link, and it will provide you with a shortened URL.</p>
         <p>Feel free to check out the project on GitHub:</p>
         <a href="https://github.com/abderrahimrhitrif/Sqwick-url-shortner" target="_blank" rel="noopener noreferrer">
-          <img src="https://img.shields.io/github/stars/abderrahimrhitrif/Sqwick-url-shortne?style=social" alt="" />
+          <img src="https://img.shields.io/github/stars/abderrahimrhitrif/Sqwick-url-shortner?style=social" alt="" />
         </a>
       </div>
       
       <a
         className="github-button"
-        href="https://github.com/your-username/your-url-shortener"
+        href="https://github.com/abderrahimrhitrif/Sqwick-url-shortner"
         target="_blank"
         rel="noopener noreferrer"
       >
