@@ -67,7 +67,7 @@ function App() {
       
         <form onSubmit={handleUrlSubmit}>
           <h3 className="label">
-            <span class="material-symbols-outlined">link</span> Enter your link here
+            <span className="material-symbols-outlined">link</span> Enter your link here
           </h3>
           <input type="text" onChange={handleUrlChange} value={url} />
           <button type="submit" disabled={isLoading}>
