@@ -84,8 +84,8 @@ function App() {
       <div className="additional-info">
         <p>This is a simple URL shortening service. Enter your link, and it will provide you with a shortened URL.</p>
         <p>Feel free to check out the project on GitHub:</p>
-        <a href="https://github.com/abderrahimrhitrif/Blog" target="_blank" rel="noopener noreferrer">
-          <img src="https://img.shields.io/github/stars/abderrahimrhitrif/Blog?style=social" alt="" />
+        <a href="https://github.com/abderrahimrhitrif/Sqwick-url-shortner" target="_blank" rel="noopener noreferrer">
+          <img src="https://img.shields.io/github/stars/abderrahimrhitrif/Sqwick-url-shortne?style=social" alt="" />
         </a>
       </div>
       

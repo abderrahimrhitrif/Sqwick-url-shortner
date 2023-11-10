@@ -51,5 +51,5 @@ app.get("/r/:shortCode", async(req, res) =>{
           }
 
 })
-module.exports = app;
+// module.exports = app;
 app.listen(4000);
