@@ -40,7 +40,7 @@ Create a .env file in the root of the project with the following:
 MONGODB_URI=<your-mongodb-uri>
 
 ```
-- Run the development server on the backend:
+- Run the development server for the backend:
 
 ```
 
@@ -49,7 +49,7 @@ npm run dev
 
 ```
 
-- Run the development server on the backend:
+- Run the development server for the frontend:
 
 ```
 
