@@ -7,7 +7,7 @@ Sqwik is a simple URL shortening service that allows users to create shortened U
 - Redirection: Accessing a shortened URL (/r/:shortCode) redirects users to the original long URL.-
 
 ## Live Version
-Visit the live version of Sqwik at https://sqk.vercel.app
+Visit the live version of Sqwik at https://sqwik.vercel.app
 
 ## Technologies Used
 - Backend: Node.js, Express.js, MongoDB (Mongoose)
